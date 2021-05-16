@@ -19,11 +19,10 @@ a {
 	margin-top: 3.2rem;
 }
 
-.nav-title{
+.nav-title {
 	position: relative;
 	bottom: 1rem;
-	margin-left: 3rem;
-	font-size: 5.4rem;
+	margin-left: 3rem;	
 	color: white;
 	font-family: 'Oswald',sans-serif;
 	text-decoration: underline;
@@ -32,60 +31,60 @@ a {
 }
 
 .nav-list {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  background-color: #f3f3f3;
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+	background-color: #f3f3f3;
 }
 
 .nav-item {
-  float: left;
+	float: left;
 }
 
 .nav-item a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 69px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+	display: block;
+	color: #666;
+	text-align: center;
+	padding: 14px 69px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
 }
 
 .nav-item a:hover:not(.active) {
-  background-color: #ddd;
+	background-color: #ddd;
 }
 
 .nav-item a.active {
-  color: white;
-  background-color: #4CAF50;
+	color: white;
+	background-color: #4CAF50;
 }
 
 /*Header*/
 .head-item1 {
-  position: relative;
-  width: auto;
-  height: 30rem;
-  border: 3px ;
+	position: relative;
+	width: auto;
+	height: 30rem;
+	border: 3px;
 }
 
 .head-item2 {
-  position: relative;
-  width: 32rem;
-  height: 200px;
-  background-color: rgb(0, 204, 0, 0.61);
-  left: 150px;
-  top: 60px;
-  padding-top: 5.5px;
+	position: relative;
+	width: 32rem;
+	height: 200px;
+	background-color: rgb(0, 204, 0, 0.61);
+	left: 150px;
+	top: 60px;
+	padding-top: 5.5px;
 } 
 
 .head-item3 {
-  position: relative;
-  float: right;
-  right: 200px;
-  bottom: 180px;
-  width: 300px;
-  height: 250px;
-  border: 3px solid green;
+	position: relative;
+	float: right;
+	right: 200px;
+	bottom: 180px;
+	width: 300px;
+	height: 250px;
+	border: 3px solid green;
 } 
 
 .header-box-title {
@@ -118,7 +117,70 @@ a {
 /*Footer*/
 .social-media {
 	position: relative;
-	bottom: 175px;
+	bottom: 150px;
 	width: 50px;
 	padding-left: 20px;
+}
+
+/*About Page Css*/
+
+/*about heading*/
+
+.header-about-img {
+	margin: 10px;
+	margin-left: 100px;
+	margin-top: 50px;
+	width: 300px;
+	height: 300px;
+}
+
+.header-about-box {
+	position: relative;
+	bottom: 300px;
+	width: 40rem;
+	height: 269px;
+	background-color: rgb(0, 204, 0, 0.61);
+	margin-left: 600px;
+}
+
+/*Footer*/
+.social-media-about {
+	position: relative;
+	bottom: 250px;
+	width: 50px;
+	padding-left: 20px;
+}
+/*SKILLS*/
+.social-media-skills{
+	width: 50px;
+	padding-left: 20px;
+}
+
+/*contact*/
+.contact-box{
+	font-family: 'montserrat',sans-serif
+   box-sizing: border-box;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(0, 204, 0, 0.61);
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
