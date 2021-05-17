@@ -17,7 +17,17 @@
 	<!-- CSS MAIN -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body id="body">
+	<script type="text/javascript">
+		document.body.classList.add('fade');
+
+		document.addEventListener("DOMContentLoaded", () => {
+		      window.setTimeout(function() {
+		        document.body.classList.remove('fade');
+		      }, 230);
+		   });
+	</script>
+
 	<!-- Navigation Bar -->
 	<nav class="nav-container">
 		<div>
@@ -41,30 +51,37 @@
 	<!-- End Navigation Bar -->
 
 	<!-- Header -->
-	<div>
-		<img class="header-about-img" src="https://fakeimg.pl/300x300/?text=Hello">
-	</div>
-	<div class="header-about-box">
-		<h1 class=".contact-box"></h1>
-		<form action="/action_page.php">
-    		<label for="fname">Full Name</label>
-    		<input type="text" id="fname" name="full name" placeholder="Your name">
-    		<label for="email">Email</label>
-    		<input type="text" id="email" name="email" placeholder="Your Email">
-    		<label for="Query">Query</label>
-    		<textarea id="Query" name="Query" placeholder="Write something.." style=height:100px></textarea>
-    <input type="submit">
-		</form>
+	<header id="header-body">
+		<div>
+			<img class="header-about-img" src="https://fakeimg.pl/300x300/?text=Hello">
+		</div>
+		<div class="header-contact-box">
+			<form>
+	    		<label for="name">Full Name</label>
+	    		<input type="text" id="name" name="full name" placeholder="Your name">
+	    		<label for="email">Email</label>
+	    		<input type="text" id="email" name="email" placeholder="Your Email">
+	    		<label for="message">Your Message</label>
+	    		<textarea name="message" placeholder="What's up on your today....." style="height:120px"></textarea>
+	    		<input type="submit">
+			</form>
+		</div>		
+	</header>
 
-	</div>
 	<!-- End Header -->
 
 	<!-- Social Media Icons -->
-	<div style="position: relative;bottom: 25px">
-		<a href=""><img class="social-media-about" src="images/fb.png"></a>
-		<a href=""><img class="social-media-about" src="images/twitter.png"></a>
-		<a href=""><img class="social-media-about" src="images/insta.png"></a>
+	<div>
+		<a href=""><img class="social-media-contact" src="images/fb.png"></a>
+		<a href=""><img class="social-media-contact" src="images/twitter.png"></a>
+		<a href=""><img class="social-media-contact" src="images/insta.png"></a>
 	</div>
 	<!-- End Social Media Icons -->
+
+	<!-- Footer -->
+	<div style="position: relative;bottom: 230px;" class="black-footer">
+		<h4 class="footer-text">Designed by <a style="color: white;" href="about.html">Shubham Aggarwal</a></h4>
+	</div>
+	<!-- End Footer -->
 </body>
 </html>

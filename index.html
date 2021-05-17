@@ -17,13 +17,23 @@
 	<!-- CSS MAIN -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body id="body">  <!-- onload="document.body.className += ' loaded';" class="fadein" -->
+	<script type="text/javascript">
+		document.body.classList.add('fade');
+
+		document.addEventListener("DOMContentLoaded", () => {
+		      window.setTimeout(function() {
+		        document.body.classList.remove('fade');
+		      }, 230);
+		   });
+	</script>
+
 	<!-- Navigation Bar -->
-	<nav class="nav-container">
+	<nav  class="nav-container">
 		<div>
 			<a href="index.html">
 				<img class="logo-image" src="https://fakeimg.pl/150x150/?text=Hello">
-				<span class="nav-title" style="font-size: 5.4rem;">SHUBHAM AGGARWAL</span>
+				<span id="nav-title" class="nav-title" style="font-size: 6rem;">SHUBHAM AGGARWAL</span>
 			</a>
 		</div>
 		<div>
@@ -41,7 +51,7 @@
 	<!-- End Navigation Bar -->
 
 	<!-- Header -->
-	<header>
+	<header id="header-body">
 		<div class="head-item1">
 			<div class="head-item2">
 				<h1 class="header-box-title">The Software Man</h1>
@@ -51,7 +61,7 @@
 				</div>
 		   </div>
 			<div class="head-item3">
-				<img src="https://fakeimg.pl/400x300/?text=Hello">
+				<img src="https://fakeimg.pl/400x300/?text=Pic">
 			</div>
 		</div>
 	</header>
@@ -66,7 +76,9 @@
 	<!-- End Social Media Icons -->
 
 	<!-- Footer -->
-
+	<div class="black-footer">
+		<h4 class="footer-text">Designed by <a style="color: white;" href="about.html">Shubham Aggarwal</a></h4>
+	</div>
 	<!-- End Footer -->
 
 </body>
