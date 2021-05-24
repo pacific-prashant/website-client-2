@@ -32,41 +32,142 @@
 	<nav class="nav-container">
 		<div>
 			<a href="index.html">
-				<img class="logo-image" src="https://fakeimg.pl/150x150/?text=Hello">
-				<span class="nav-title">Gallery</span>
+				<img src="https://fakeimg.pl/150x150/?text=Hello">
 			</a>
 		</div>
 		<div>
-			<ul class="nav-list">
-				<li class="nav-item"><a href="index.html">Home</a></li>
-			  <li class="nav-item"><a href="about.html">About</a></li>
-			  <li class="nav-item"><a href="skills.html">Skills</a></li>
-			  <li class="nav-item"><a href="academics.html">Academics</a></li>
-			  <li class="nav-item"><a href="goals.html">Goals</a></li>
-			  <li class="nav-item"><a href="idols.html">Idols</a></li>
-			  <li class="nav-item"><a class="active" href="gallery.html">Gallery</a></li>
-			  <li class="nav-item"><a href="contact-me.html">Contact Me</a></li>
-			</ul>
+			<h1 class="nav-title">Gallery</h1>
 		</div>
 	</nav>
+	<div>
+		<ul class="nav-list">
+		  <li class="nav-item"><a href="index.html">Home</a></li>
+		  <li class="nav-item"><a href="about.html">About</a></li>
+		  <li class="nav-item"><a href="skills.html">Skills</a></li>
+		  <li class="nav-item"><a href="academics.html">Academics</a></li>
+		  <li class="nav-item"><a href="goals.html">Goals</a></li>
+		  <li class="nav-item"><a href="idols.html">Idols</a></li>
+		  <li class="nav-item"><a class="active" href="gallery.html">Gallery</a></li>
+		  <li class="nav-item"><a href="contact-me.html">Contact Me</a></li>
+		</ul>
+	</div>
 	<!-- End Navigation Bar -->
 
 	<!-- Header -->
-	
+	<div id="header-body" class="gallery-header">
+		<div class="row">
+		  <div class="column">
+		    <img src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+		    <img src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+		    <img src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+		    <img src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+		  </div>
+		</div>
+
+		<div id="myModal" class="modal">
+		  <span class="close cursor" onclick="closeModal()">&times;</span>
+		  <div class="modal-content">
+
+		    <div class="mySlides">
+		      <div class="numbertext">1 / 4</div>
+		      <img src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%">
+		    </div>
+
+		    <div class="mySlides">
+		      <div class="numbertext">2 / 4</div>
+		      <img src="https://www.w3schools.com/howto/img_snow.jpg" style="width:100%">
+		    </div>
+
+		    <div class="mySlides">
+		      <div class="numbertext">3 / 4</div>
+		      <img src="https://www.w3schools.com/howto/img_mountains.jpg" style="width:100%">
+		    </div>
+		    
+		    <div class="mySlides">
+		      <div class="numbertext">4 / 4</div>
+		      <img src="https://www.w3schools.com/howto/img_lights.jpg" style="width:100%">
+		    </div>
+		    
+		    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		    <div class="caption-container">
+		      <p id="caption"></p>
+		    </div>
+
+
+		    <div class="column">
+		      <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+		    </div>
+		    <div class="column">
+		      <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+		    </div>
+		    <div class="column">
+		      <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+		    </div>
+		    <div class="column">
+		      <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+		    </div>
+		  </div>
+		</div>	
+	</div>
+	<script>
+		function openModal() {
+		  document.getElementById("myModal").style.display = "block";
+		}
+
+		function closeModal() {
+		  document.getElementById("myModal").style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
 	<!-- End Header -->
 
 	<!-- Social Media Icons -->
-	<div style="position: relative;bottom: 250px">
-		<a href=""><img class="social-media-goals" src="images/fb.png"></a>
-		<a href=""><img class="social-media-goals" src="images/twitter.png"></a>
-		<a href=""><img class="social-media-goals" src="images/insta.png"></a>
+	<div class="social-icons">
+		<a href=""><img class="social-media-about" src="images/fb.png"></a>
+		<a href=""><img class="social-media-about" src="images/twitter.png"></a>
+		<a href=""><img class="social-media-about" src="images/insta.png"></a>
 	</div>
 	<!-- End Social Media Icons -->
-	
+
 	<!-- Footer -->
-	<div style="position: relative;bottom: 250px;" class="black-footer">
+	<div class="black-footer">
 		<h4 class="footer-text">Designed by <a style="color: white;" href="about.html">Shubham Aggarwal</a></h4>
 	</div>
 	<!-- End Footer -->
-</body>
 </html>
