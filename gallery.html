@@ -55,6 +55,7 @@
 
 	<!-- Header -->
 	<div id="header-body" class="gallery-header">
+		<h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align:center">Memories</h2>
 		<div class="row">
 		  <div class="column">
 		    <img src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
@@ -117,44 +118,7 @@
 		  </div>
 		</div>	
 	</div>
-	<script>
-		function openModal() {
-		  document.getElementById("myModal").style.display = "block";
-		}
-
-		function closeModal() {
-		  document.getElementById("myModal").style.display = "none";
-		}
-
-		var slideIndex = 1;
-		showSlides(slideIndex);
-
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("demo");
-		  var captionText = document.getElementById("caption");
-		  if (n > slides.length) {slideIndex = 1}
-		  if (n < 1) {slideIndex = slides.length}
-		  for (i = 0; i < slides.length; i++) {
-		      slides[i].style.display = "none";
-		  }
-		  for (i = 0; i < dots.length; i++) {
-		      dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";
-		  dots[slideIndex-1].className += " active";
-		  captionText.innerHTML = dots[slideIndex-1].alt;
-		}
-	</script>
+	<script src="js/main.js"></script>
 	<!-- End Header -->
 
 	<!-- Social Media Icons -->

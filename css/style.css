@@ -29,7 +29,7 @@ a {
 
 @media screen and (max-width:600px) {
 	.nav-container {
-		height: auto;
+		height: 150px;
 	}
 }
 
@@ -55,8 +55,10 @@ nav h1 {
 
 @media screen and (max-width:600px) {
 	.nav-title {
-		font-size: 35px;
+		font-size: 32px;
 		margin: 0;
+		margin-top: 35px;
+		margin-left: 10px;
 	}
 }
 
@@ -77,7 +79,7 @@ nav h1:hover::before {
 }
 
 @media screen and (max-width:600px) {
-	nav span::before {
+	nav h1::before {
 		visibility: hidden;
 	}
 }
@@ -89,6 +91,13 @@ nav h1:hover::before {
 	padding: 0;
 	overflow: hidden;
 	background-color: #f3f3f3;
+}
+
+@media screen and (max-width:600px) {
+	.nav-list {
+		height: 500px;
+		display: grid;
+	}
 }
 
 .nav-item {
@@ -166,7 +175,30 @@ nav h1:hover::before {
 .head-item2 img {
 	margin: 30px 20%;
 	border: 3px solid green;
-} 
+}
+
+@media screen and (max-width:600px) {
+	.header-body {
+		display: grid;
+		height: 800px;
+	}
+
+	.head-item1 {
+		height: 400px;
+		margin: auto;
+		width: 100%;
+	}
+
+	.head-item2 {
+		margin: 0;
+		margin-left: 3px;
+		height: 300px;
+	}
+
+	.head-item2 img {
+		margin: 0;
+	}
+}
 
 /*Footer*/
 .social-media {
@@ -192,6 +224,12 @@ nav h1:hover::before {
 	border: 3px solid green;
 }
 
+@media screen and (max-width:600px) {
+	.header-about-img img {
+		margin-left: 60px;
+	}
+}
+
 .header-about-box {
 	width: 50%;
 	margin: 0 auto;
@@ -204,6 +242,17 @@ nav h1:hover::before {
 	background-color: rgb(0, 165, 80);
 }
 
+@media screen and (max-width:600px) {
+	.header-about-box {
+		margin-left: 55px;
+	}
+
+	.header-about-box div {
+		width: 20rem;
+		height: 360px;
+	}	
+}
+
 /*Footer*/
 .social-media-about {
 	width: 50px;
@@ -214,6 +263,12 @@ nav h1:hover::before {
 	transition: ease-in-out 400ms;
 	filter: drop-shadow(5px 5px 3px rgb(0, 165, 80));
 	opacity: 0.9;
+}
+
+@media screen and (max-width:600px) {
+	.social-media-about {
+		margin-top: 70px;
+	}
 }
 
 /*Goals Page Css*/
@@ -264,9 +319,20 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width:600px) {
+	.header-contact-box {
+		margin: 0;
+		margin-left: 95px;
+	}
+}
+
+@media screen and (max-width:600px) {
 	.social-media {
-		width: 40px;
-		padding: 10px;
+		width: 50px;
+		margin: 10px 40px;
+	}
+
+	.black-footer {
+		position: relative;
 	}
 }
 
@@ -331,6 +397,12 @@ body.fade {
 	margin-top: 80px;
 	width: auto;
 	height: 300px;
+}
+
+@media screen and (max-width:600px) {
+	.gallery-header {
+		height: 80px;
+	}
 }
 
 /*Lightbox*/
